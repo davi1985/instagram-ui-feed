@@ -23,10 +23,6 @@ export const styles = StyleSheet.create({
     color: "#333",
     fontWeight: "bold",
   },
-  postImage: (ratio) => ({
-    width: "100%",
-    aspectRatio: ratio,
-  }),
   description: {
     padding: 15,
     lineHeight: 18,

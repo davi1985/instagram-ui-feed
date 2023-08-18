@@ -1,6 +1,7 @@
 import { Animated, ImageBackground } from "react-native";
-import { styles } from "./styles";
 import { useEffect, useState } from "react";
+
+import { styles } from "./styles";
 
 export const LazyImage = ({ smallSource, source, aspectRatio, shouldLoad }) => {
   const opacity = new Animated.Value(0);

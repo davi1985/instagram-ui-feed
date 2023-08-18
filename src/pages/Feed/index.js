@@ -1,8 +1,10 @@
 import { FlatList, Text, View, Image, ActivityIndicator } from "react-native";
-import { Header } from "../../components/Header";
-import { styles } from "./styles";
 import { useEffect, useState, useCallback } from "react";
+
+import { Header } from "../../components/Header";
 import { LazyImage } from "../../components/LazyImage";
+
+import { styles } from "./styles";
 
 export const Feed = () => {
   const [feed, setFeed] = useState([]);
@@ -50,9 +52,10 @@ export const Feed = () => {
     setRefreshing(false);
   };
 
-  const handleViwableChanged = useCallback(({ changed }) => {
-    setViewable(changed.map(({ item }) => item.id));
-  }, []);
+  const handleViwableChanged = useCallback(
+    ({ changed }) => setViewable(changed.map(({ item }) => item.id)),
+    []
+  );
 
   return (
     <>
